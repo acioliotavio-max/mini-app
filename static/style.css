@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+    color: #d1d5db;
+}
+
+main {
+    width: min(900px, 92%);
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.principal {
+    background: #2563eb;
+    color: white;
+    margin-top: 18px;
+}
+
+.principal:hover {
+    background: #1d4ed8;
+}
+
+.tarefas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tarefas-header h2 {
+    margin: 0;
+}
+
+.filtros {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filtros a {
+    color: #374151;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid #e5e7eb;
+}
+
+.filtros a.ativo {
+    background: #2563eb;
+    color: white;
+}
+
+.lista-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarefa {
+    background: white;
+    border-left: 5px solid #f59e0b;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.tarefa.concluida {
+    border-left-color: #16a34a;
+}
+
+.tarefa.concluida h3 {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.tarefa-conteudo {
+    flex: 1;
+}
+
+.tarefa h3 {
+    margin: 0 0 8px;
+}
+
+.tarefa p {
+    color: #6b7280;
+}
+
+.status {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.concluida .status {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.acoes form {
+    margin: 0;
+}
+
+.status-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.editar {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.excluir {
+    background: #dc2626;
+    color: white;
+}
+
+.cancelar {
+    background: #e5e7eb;
+    color: #111827;
+    margin-top: 18px;
+}
+
+.form-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.mensagens {
+    margin-bottom: 20px;
+}
+
+.mensagem {
+    padding: 14px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.mensagem.sucesso {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.mensagem.erro {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.vazio {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    color: #6b7280;
+}
+
+@media (max-width: 650px) {
+    .tarefa {
+        flex-direction: column;
+    }
+
+    .acoes {
+        width: 100%;
+    }
+
+    .acoes .btn,
+    .acoes form {
+        flex: 1;
+    }
+
+    .acoes form .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Editar tarefa{% endblock %}
+
+{% block content %}
+
+<section class="card">
+
+    <h2>Editar tarefa</h2>
+
+    <form
+        action="{{ url_for('editar', tarefa_id=tarefa['id']) }}"
+        method="POST"
+    >
+
+        <label for="titulo">Título</label>
+
+        <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            value="{{ tarefa['titulo'] }}"
+            required
+        >
+
+        <label for="descricao">Descrição</label>
+
+        <textarea
+            id="descricao"
+            name="descricao"
+        >{{ tarefa['descricao'] or '' }}</textarea>
+
+        <div class="form-acoes">
+
+            <button type="submit" class="btn principal">
+                Salvar alterações
+            </button>
+
+            <a href="{{ url_for('index') }}" class="btn cancelar">
+                Cancelar
+            </a>
+
+        </div>
+
+    </form>
+
+</section>
+
+{% endblock %}
